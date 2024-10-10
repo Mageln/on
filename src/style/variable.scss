@@ -1,0 +1,31 @@
+ @mixin btnActiv{
+    width: fit-content;
+    padding: 0 20px;
+    height: 41px;
+    background:rgb(37, 47, 64) ;
+    border-radius: 9.09px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+@mixin btn{
+    width: fit-content;
+    height: 41.83px;
+    border-radius: 9.09px;
+    background: inherit;
+    padding: 0 20px;
+    border: 1px solid rgba(44, 180, 147, 0.5);
+    cursor: pointer;
+   
+}
+
+@mixin question{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 10px;
+}

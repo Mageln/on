@@ -1,0 +1,91 @@
+@import "../variable.scss";
+
+.usingMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .usingMain__container {
+    max-width: 500px;
+  }
+  .description{
+    color: #67748E;
+    padding: 16px 0 66px 0 ;
+  }
+  .question {
+    @include question;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .question:hover:after {
+    content: "Выберите чем вы будете заниматься";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .question:hover:after {
+    opacity: 1;
+  }
+
+  .active {
+    @include btnActiv;
+  }
+  .btn {
+    @include btn;
+  }
+  .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .groupBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+
+
+    .btn_back{
+        background: inherit;
+        border: none;
+        margin-right: 56px;
+        cursor: pointer;
+    }
+ 
+  }
+
+  @media (max-width: 768px){
+    .usingMain__container{
+        text-align: center;
+
+        .group {
+            justify-content: flex-start;
+            padding-left: 20px;
+            gap:3px;
+            button{
+                font-size: 11px;
+            }
+        }
+        .groupBtn{
+            align-items: center;
+            display: flex;
+            flex-direction: column-reverse;
+            .active{
+                width: 325px;
+                height: 50px;  
+            }
+            .btn_back{
+                margin-top: 20px;
+                padding:  0 0 20px 59px;
+            }
+        }
+    }
+  }
+}

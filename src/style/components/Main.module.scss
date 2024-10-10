@@ -1,0 +1,219 @@
+@import "../variable.scss";
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .main__container{
+        max-width: 407.37px;
+    }
+    .header{
+        .description{
+            color: rgb(103, 116, 142);
+        }
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+  .name {
+    display: flex;
+    flex-direction: column;
+    &>label{
+        color: rgb(44, 180, 147);
+        position: relative;
+        top: 9px;
+        left: 20px;
+        background: white;
+        width: 77px;
+    
+    }
+    & > input {
+        padding-left: 20px;
+      width: 360px;
+      height: 52px;
+      border: 1.36px solid rgb(37, 47, 64);
+      border-radius: 9.09px;
+    }
+  }
+.businessForm{
+    max-width: 371px;
+}
+  .question{
+ @include question
+  }
+  .activity{
+    display: flex;
+    flex-direction: column;
+  }
+  .employeeCount{
+    display: flex;
+    flex-direction: column;
+  }
+  .manager{
+    display: flex;
+    flex-direction: column;
+  }
+  .active{
+ @include btnActiv;
+  }
+  .btn{
+   @include btn;
+  }
+  .title{
+   
+    color: rgb(103, 116, 142);
+  }
+  .description{
+    color: rgb(103, 116, 142);
+    margin-bottom: 19px;
+  }
+  .groupBtn{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .question {
+    @include question;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .question:hover:after {
+    content: "Оформите бизнес в виде индивидуального предпринимателя или юридического лица";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s; 
+  }
+  
+  .question:hover:after {
+    opacity: 1;
+  }
+  .continuation {
+    position: relative;
+    left: 186%;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 100px;
+  }
+  
+  .continuation:hover .arrow div {
+    animation: arrow 1s linear infinite;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .arrow div {
+    position: relative;
+    top: 7px;
+    width: 70px;
+    height: 1px;
+    background-color: rgb(37, 47, 64);
+    left: 51px;
+    display: block;
+  }
+  
+  .arrow div::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    top: -3px;
+    right: -2px;
+    background-color: rgb(37, 47, 64);
+    transform: rotate(45deg);
+  }
+  
+  .arrow div::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    top: 3px;
+    right: -2px;
+    background-color: rgb(37, 47, 64);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+  }
+  
+  @keyframes arrow {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .error{
+    color: red;
+    padding-top: 10px;
+  }
+
+
+ 
+}
+
+@media (max-width: 768px) {
+    main{
+
+
+
+        .main__container {
+            padding: 10px;
+            text-align: left;
+            
+        }
+
+        .header {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+       
+            .description {
+                font-size: 16px;
+            }
+            .groupBtn {
+                display: flex;
+            gap:2px
+            }
+            .btn {
+                margin: 5px;
+                padding: 5px 10px;
+            }
+            .continuation {
+                width: 325px;
+                height: 50px;
+                left: 0;
+                border-radius: 10px;
+        background: rgb(37, 47, 64);
+        margin:  45px 0 50px 20px;
+        padding: 0;
+            }
+    }
+
+
+
+}
