@@ -52,8 +52,8 @@ export const UsingMain = () => {
             });
 
             if (response.status === 200) {
-                // Если сервер ответил статусом 200, делаем редирект на N адрес
-                navigate('/next-page'); // Замените '/next-page' на ваш целевой маршрут
+    
+                navigate('/next-page'); 
             } else {
                 console.error('Ошибка при отправке данных на сервер');
             }
