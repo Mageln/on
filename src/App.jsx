@@ -4,6 +4,7 @@ import { UsingThePlatform } from './pages/usingThePlatform/usingThePlatform'
 import { Header } from './components/Header'
 
 
+
 function App() {
 
 
@@ -15,6 +16,15 @@ function App() {
           <Route path="/using" element={<UsingThePlatform />} />
         </Routes>
   </BrowserRouter>
+  // <div>
+  //   <Header/>
+  //   {currentPage === "registration" ? (
+  //     <Registration handlePageChange={handlePageChange}/>
+  //   ):(
+  //     <UsingThePlatform handlePageChange={handlePageChange}/>
+  //   )
+  //   }
+  // </div>
   )
 }
 
