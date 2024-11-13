@@ -1,6 +1,6 @@
 import { BrowserRouter,  Route, Routes } from 'react-router-dom'
 import { Registration } from './pages/Registration/Registration'
-import { UsingThePlatform } from './pages/usingThePlatform/usingThePlatform'
+import { UsingThePlatform } from './pages/UsingThePlatform/UsingThePlatform'
 import { Header } from './components/Header'
 
 
