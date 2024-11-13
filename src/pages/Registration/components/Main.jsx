@@ -71,7 +71,7 @@ export const Main = () => {
         setEmployeeCount(count);
         setActiveEmployee(count);
     
-        // Очистить ошибку, если она была
+
         setErrors((prevErrors) => ({
             ...prevErrors,
             employeeCount: ''
@@ -81,7 +81,7 @@ export const Main = () => {
         setActivity(activityName);
         setActiveActivity(activityName);
     
-        // Очистить ошибку, если она была
+
         setErrors((prevErrors) => ({
             ...prevErrors,
             activity: ''
@@ -130,7 +130,7 @@ export const Main = () => {
     
         setErrors(newErrors);
     
-        // Проверяем наличие ошибок в локальной переменной
+ 
         if (Object.values(newErrors).some((error) => error !== "")) {
             console.log("Ошибка валидации", newErrors);
             return; // Остановить выполнение, если есть ошибки
